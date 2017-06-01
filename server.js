@@ -41,8 +41,7 @@ app.get('/', (req, res) => {
 
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
-    pageTitle: 'About page',
-    currentYear: new Date().getFullYear()
+    pageTitle: 'About page'
   });
 });
 
@@ -50,6 +49,12 @@ app.get('/bad', (req, res) => {
   res.send({
     errorMessage: 'Website unknown! Please try again',
     test: 'bad'
+  })
+})
+
+app.get('/projects', (req, res) => {
+  res.render('project.hbs' ,{
+    pageTitle: 'Project page'
   })
 })
 
